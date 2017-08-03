@@ -1,0 +1,29 @@
+<template name="second">
+
+  <div>{{ageVaue}}</div>
+
+  <div>제목<input id="inpTitle" type="text" name="text" placeholder="제목을 입력해 주세요"/></div>
+  <div>본문<input id="inpBody" type="text" name="text" placeholder="본문을 입력해 주세요"/></div>
+  <div>
+    <button id="btnWrite">Write</button>
+    <button id="btnEdit">Edit</button>
+  </div>
+
+  <table class="table table-striped">
+    {{#each boards}}
+      <tr id="trRow">
+        <td>
+          <div class="checkbox">
+            <label>
+              <input class="inpCheck" id="{{_id}}" type="checkbox">
+            </label>
+          </div>
+        </td>
+        <td>{{title}}</td>
+        <td>{{body}}</td>
+        <td><button id="btnRemove">X</button></td>
+      </tr>
+    {{/each}}
+  </table>
+
+</template>
